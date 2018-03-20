@@ -1,0 +1,16 @@
+.left-nav {
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #3f4044;
+    overflow-x: hidden;
+    padding: 8px 0;
+    height: 100%;
+}
+
+.main {
+    margin-left: 220px; /* Same width as the sidebar + left position in px */
+    /* padding: 0px 10px; */
+}
