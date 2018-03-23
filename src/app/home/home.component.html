@@ -1,6 +1,7 @@
+<!-- Top Navigation Starts Here -->
 <header>
 
-  <!-- Mobile Navigation -->
+  <!-- Mobile Navigation Top Navigation Starts Here -->
   <nav class="navbar navbar-dark flex-md-row bd-navbar mobile-nav fixed-top">
     <button mat-icon-button>
       <mat-icon class="menu-icon" (click)="snav.toggle()">menu</mat-icon>
@@ -41,20 +42,21 @@
       </mat-menu>
     </div>
   </nav>
+  <!-- Mobile Navigation Top Navigation Ends Here -->
 
-  <!-- Desktop Navigation -->
+  <!-- Desktop Top Navigation Starts Here-->
   <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar header-nav fixed-top" id="headerId">
 
     <div class="navbar-nav-scroll">
       <ul class="navbar-nav bd-navbar-nav flex-row">
         <li class="nav-item">
-            <form class="form-inline my-2 my-lg-0">
-                <mat-form-field>
-                    <mat-label>Search....</mat-label>
-                    <input matInput placeholder="Type to Search...." [type]="text">
-                    <mat-icon matSuffix >search</mat-icon>
-                  </mat-form-field>
-              </form>
+          <form class="form-inline my-2 my-lg-0">
+            <mat-form-field>
+              <mat-label>Search....</mat-label>
+              <input matInput placeholder="Type to Search....">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </form>
         </li>
       </ul>
     </div>
@@ -90,38 +92,34 @@
       </mat-menu>
     </div>
   </nav>
+  <!-- Desktop Top Navigation Ends Here-->
 </header>
+<!-- Top Navigation Ends Here -->
 
 
 <mat-sidenav-container>
+  <!-- Mobile Nav Stats Here -->
   <mat-sidenav #snav>
     <mat-sidenav #sidenav (keydown.escape)="close()" disableClose></mat-sidenav>
     <mat-nav-list>
-        <a class=""  mat-list-item routerLink=".">
-            <i class="ion-ios-box"></i> Products
-        </a>
-        <a class=""  mat-list-item routerLink=".">
-            <i class="ion-ios-copy"></i> Whiteslists
-        </a>
-        <a class=""  mat-list-item routerLink=".">
-            <i class="ion-shuffle"></i> Api Application
-        </a>
-      <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+      <a class="" mat-list-item routerLink=".">
+        <i class="ion-ios-box"></i> Products
+      </a>
+      <a class="" mat-list-item routerLink=".">
+        <i class="ion-ios-copy"></i> Whiteslists
+      </a>
+      <a class="" mat-list-item routerLink=".">
+        <i class="ion-shuffle"></i> Api Application
+      </a>
     </mat-nav-list>
 
-    <!-- <div class="marg-top-15">
-        <a class="dropdown-item" href="#">
-          <i class="ion-ios-box"></i> Products</a>
-        <a class="dropdown-item" href="#">
-          <i class="ion-ios-copy"></i> Whiteslists</a>
-        <a class="dropdown-item" href="#">
-          <i class="ion-shuffle"></i> Api Application</a>
-      </div> -->
   </mat-sidenav>
+  <!-- Mobile Nav Ends Here -->
 
   <mat-sidenav-content>
 
     <div class="container-fluid">
+      <!-- LeftNav Starts Here -->
       <div class="left-nav">
         <nav>
           <div class="title">
@@ -140,7 +138,9 @@
         </nav>
 
       </div>
+      <!-- Left Nav Ends Here -->
 
+      <!-- Main Page Starts Here -->
       <div class="main">
         <h4>Products</h4>
         <div class="dropdown-divider"></div>
@@ -149,111 +149,19 @@
           <mat-divider></mat-divider>
           <div class="dropdown-divider"></div>
 
-          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 " *ngFor="let album of albums">
-            <div class="card">
-                <img class="card-img-top" src="{{album.imagePath}}" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">{{album.title}}</p>
-                </div>
-              </div>
-          </div> -->
-
-
+          <!-- Displaying the Album -->
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-25 " *ngFor="let album of albums">
             <div class="img-album">
-            <img src="{{album.imagePath}}" alt="" class="img-thumbnail img-fluid">
-            <span class="product-title">{{album.title}}</span>
-            <span class="product-desc">{{album.description}}</span>
-          </div>
-          </div>
-          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-              <div class="card">
-                  <img class="card-img-top" src="https://dummyimage.com/200x200/8f8b8f/fff" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example content.</p>
-                  </div>
-                </div>
+              <img src="{{album.imagePath}}" alt="" class="img-thumbnail img-fluid">
+              <span class="product-title">{{album.title}}</span>
+              <span class="product-desc">{{album.description}}</span>
+            </div>
           </div>
 
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
-            <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
-          </div>
- -->
         </div>
 
       </div>
+      <!-- Main Page Ends Here -->
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

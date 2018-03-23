@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit {
 
   albums: any = [];
 
-  fillerNav = Array(10).fill(0).map((_, i) => `Nav Item ${i + 1}`);
-
   close() {
     this.sidenav.close();
   }
@@ -21,6 +19,9 @@ export class HomeComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+    /**
+     * Initializing albums object
+    */
     this.albums = [
       {
         title: 'Lorem Ipsum',
@@ -122,6 +123,7 @@ export class HomeComponent implements OnInit {
     ];
   }
 
+  /* Windows Scroll Listener */
   @HostListener('window:scroll', [])
   onWindowScroll() {
 
