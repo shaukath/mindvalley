@@ -44,9 +44,6 @@
 
   <!-- Desktop Navigation -->
   <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar header-nav fixed-top" id="headerId">
-    <!-- <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-      <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="36px" alt="">
-    </a> -->
 
     <div class="navbar-nav-scroll">
       <ul class="navbar-nav bd-navbar-nav flex-row">
@@ -57,24 +54,8 @@
                     <input matInput placeholder="Type to Search...." [type]="text">
                     <mat-icon matSuffix >search</mat-icon>
                   </mat-form-field>
-                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
               </form>
         </li>
-       <!--  <li class="nav-item">
-          <a class="nav-link" routerLink="/docs" routerLinkActive="active">Documentation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/employees" routerLinkActive="active">Employees</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/themes" routerLinkActive="active">Themes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/jobs" routerLinkActive="active">Jobs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/blog" routerLinkActive="active" target="_blank">Blog</a>
-        </li> -->
       </ul>
     </div>
 
@@ -114,10 +95,28 @@
 
 <mat-sidenav-container>
   <mat-sidenav #snav>
-    <!-- <mat-sidenav #sidenav (keydown.escape)="close()" disableClose></mat-sidenav> -->
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose></mat-sidenav>
     <mat-nav-list>
-      <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+        <a class=""  mat-list-item routerLink=".">
+            <i class="ion-ios-box"></i> Products
+        </a>
+        <a class=""  mat-list-item routerLink=".">
+            <i class="ion-ios-copy"></i> Whiteslists
+        </a>
+        <a class=""  mat-list-item routerLink=".">
+            <i class="ion-shuffle"></i> Api Application
+        </a>
+      <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
     </mat-nav-list>
+
+    <!-- <div class="marg-top-15">
+        <a class="dropdown-item" href="#">
+          <i class="ion-ios-box"></i> Products</a>
+        <a class="dropdown-item" href="#">
+          <i class="ion-ios-copy"></i> Whiteslists</a>
+        <a class="dropdown-item" href="#">
+          <i class="ion-shuffle"></i> Api Application</a>
+      </div> -->
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -149,8 +148,31 @@
 
           <mat-divider></mat-divider>
           <div class="dropdown-divider"></div>
-          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
-            <img src="assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 " *ngFor="let album of albums">
+            <div class="card">
+                <img class="card-img-top" src="{{album.imagePath}}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">{{album.title}}</p>
+                </div>
+              </div>
+          </div> -->
+
+
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-25 " *ngFor="let album of albums">
+            <div class="img-album">
+            <img src="{{album.imagePath}}" alt="" class="img-thumbnail img-fluid">
+            <span class="product-title">{{album.title}}</span>
+            <span class="product-desc">{{album.description}}</span>
+          </div>
+          </div>
+          <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
+              <div class="card">
+                  <img class="card-img-top" src="https://dummyimage.com/200x200/8f8b8f/fff" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example content.</p>
+                  </div>
+                </div>
           </div>
 
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15 ">
@@ -228,7 +250,7 @@
           <div class="col-lg-2 col-md-3 col-sm-4 col-6 marg-bottom-15">
             <img src="https://dummyimage.com/200x200/8f8b8f/fff" alt="" class="img-thumbnail img-fluid">
           </div>
-
+ -->
         </div>
 
       </div>
